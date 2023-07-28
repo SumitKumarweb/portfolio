@@ -553,9 +553,24 @@ section
     color: crimson;
 }
 
+.skill .skill-content .right {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
 .skill .skill-content .right .bars  
 {
-    margin-bottom: 15px;
+    margin: 10px;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7em;
+    color: #000000;
+    border-radius: 10px;
 }
 
 .skill .skill-content .right .info
@@ -566,10 +581,10 @@ section
     margin-bottom: 3px;
 }
 
-.skill .skill-content .right .info span
+.skill .skill-content .right .info img
 {
-    font-weight: 500;
-    font-size: 15px;
+    width: 100px;
+    object-fit:cover ;
 }
 
 .skill .skill-content .right .line
@@ -592,43 +607,6 @@ section
     top: 0;
     background:crimson ;
 }
-
-.skill .skill-content .right .html::before
-{
-    width: 95%;
-}
-
-.skill .skill-content .right .css::before
-{
-    width: 85%;
-}
-
-.skill .skill-content .right .bootstrap::before
-{
-    width: 75%;
-}
-
-.skill .skill-content .right .java::before
-{
-    width: 80%;
-}
-
-.skill .skill-content .right .cpp::before
-{
-    width: 70%;
-}
-
-.skill .skill-content .right .javascript::before
-{
-    width: 45%;
-}
-
-.skill .skill-content .right .php::before
-{
-    width: 30%;
-}
-
-
 .skill .skill-content .right .bars:hover
 {
     transform: scale(1.05);
