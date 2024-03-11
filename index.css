@@ -165,34 +165,18 @@ html
 .home
 {
     display: flex;
-    /* background: url("image/snap8.jpeg") no-repeat center; */
     background-color: black;
     height: 100vh;
     width: 100%;
     min-height: 500px;
     color: #fff;
     font-family: 'ubuntu',sans-serif;
-
-
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
 }
 .love{
-    /* display: grid; */
-    /* position:absolute; */
-    float:right ;
-    width: 48%;
-    /* padding: 15px; */
-    /* border-style: dotted; */
-    /*border: 2px solid whitesmoke; */
-   border-radius: 50%;    
-    padding: 2px;
-
-
-}
-
-.home .max-width
-{
-    margin:  auto 0 auto 40px ;
-    transition: 1s ease;
+    border-radius: 50%;
 }
 
 .home .home-content .text-1
