@@ -177,6 +177,7 @@ html
 }
 .love{
     border-radius: 50%;
+     mix-blend-mode: difference;
 }
 
 .home .home-content .text-1
