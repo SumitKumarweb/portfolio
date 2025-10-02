@@ -1042,6 +1042,131 @@ footer span a, footer span+span
     }
 }
 
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: crimson;
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+/* Title */
+.contact .title {
+    text-align: center;
+    font-size: 40px;
+    color: crimson;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.contact .title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: crimson;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Contact Content */
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Left Column */
+.contact-left {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-left .intro {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+.contact-info .info-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.contact-info .info-row i {
+    font-size: 25px;
+    color: crimson;
+    width: 35px;
+}
+
+.contact-info h4 {
+    font-size: 16px;
+    margin: 0 0 5px 0;
+    color: #fff;
+}
+
+.contact-info p {
+    margin: 0;
+    color: #aaa;
+}
+
+/* Right Column */
+.contact-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-right .intro {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #222;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.social-links a i {
+    font-size: 20px;
+    color: crimson;
+}
+
+.social-links a:hover {
+    background: crimson;
+    color: #000;
+}
+
+.social-links a:hover i {
+    color: #000;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .contact-content {
+        flex-direction: column;
+    }
+}
+
 /* Connect Me Section Formatting */
 .connect {
     font-family: 'Poppins', sans-serif;
