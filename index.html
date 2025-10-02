@@ -77,8 +77,7 @@
             <div class="text-1">Hello My Name is</div>
             <div class="text-2">Sumit Kumar</div>
             <div class="text-3">I'm a <span class="typing"></span> </div>
-            <a href="#">Hire Me </a>
-            
+            <a href="./sumit_kumar_resume.pdf" target="_blank" onclick="downloadFile()">Hire Me </a>            
         </div>
         <img class="love" src="./sumit.png"  width="270px" alt="">
     </section>
@@ -99,13 +98,14 @@
                 <div class="collumn right">
 
                     <div class="text">I am Sumit . <br> I'm A <span> Web Developer. </span></div>
-                    <p>Hello I'm Professional front-end Web Developer. I have mastered technologies like HTML, CSS,
+                    <p> I'm Professional front-end Web Developer. I have mastered technologies like HTML, CSS,
                         BOOTSTRAP. I also have my hands on technologies like JAVASCRIPT, PHP.Turning your dream website
                         into reality is my job.
                         Hello I'm looking for remote work / Internship for Frontend Web Developer Position.I don't just
                         create websites, I create websites that promote you / your business to world 24x7.Responsive Web
-                        Design always plays an important role so I Believe in quality over quantity. </p>
-                    <a href="./sumit_kumar_resume.pdf">Download Resume</a>
+                        Design always plays an important role so I Believe in quality over quantityHello. </p>
+                        <a href="./sumit_kumar_resume.pdf" target="_blank" onclick="downloadFile()"">Download Resume</a>
+
 
                 </div>
 
@@ -183,7 +183,7 @@
                     <div class="bars">
 
                         <div class="info">
-                            <img src="./html5.svg" alt="">
+                            <img src="./html.png" alt="">
                         </div>
 
 
@@ -192,7 +192,7 @@
                     <div class="bars">
 
                         <div class="info">
-                            <img src="./css3-alt.svg" alt="">
+                            <img src="./css.png" alt="">
                         </div>
 
 
@@ -202,7 +202,7 @@
                     <div class="bars">
 
                         <div class="info">
-                            <img src="./js.svg" alt="">
+                            <img src="./js-file.png" alt="">
                         </div>
 
 
@@ -223,7 +223,7 @@
                     <div class="bars">
 
                         <div class="info">
-                            <img src="./node-js.svg" alt="">
+                            <img src="./programing.png" alt="">
                         </div>
 
 
@@ -248,7 +248,7 @@
                     <div class="bars">
 
                         <div class="info">
-                            <img src="./bootstrap.svg" alt="">
+                            <img src="./bootstrap.png" alt="">
                         </div>
 
                     </div>
@@ -260,6 +260,37 @@
     </section>
 
     <!-- Form Sections Start-->
+    <section class="connect" id="connect">
+        <div class="max-width">
+            <h2 class="title">Connect Me</h2>
+            <div class="connect-content">
+                <div class="collumn left">
+                    <div class="text">Send Me a Message</div>
+                    <p>If you want to discuss a project, say hi, or connect professionally, feel free to drop a message here.</p>
+                </div>
+                <div class="collumn right">
+                    <form action="" class="connect-form">
+                        <div class="field">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="field">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="field">
+                            <textarea name="message" placeholder="Message" required></textarea>
+                        </div>
+                        <div class="button-area">
+                            <button type="submit">Send Message</button>
+                        </div>
+                    </form>                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Form Sections End-->
 
 
 
@@ -354,17 +385,45 @@
         </div>
     </section>
 
-
-
-
     <!-- contact Section Ends -->
 
     <footer>
         <span> Website is Designed <span>&</span> Developed By <a href="#">Sumit Kumar</a> || <span
-                class="fas fa-copyright"></span> 2024-25 All <span> Rights</span> Reserved </span>
+                class="fas fa-copyright"></span> 2025-26 All <span> Rights</span> Reserved </span>
     </footer>
 
     <script src="./index.js"></script>
+    <script>
+        function downloadFile() {
+            const link = document.createElement('a');
+            link.href = './sumit_kumar_resume.pdf';
+            link.download = 'Sumit_Kumar_Resume.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+        </script>
+
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script>
+            (function(){
+                emailjs.init("T2vQJZfmq4dXRIFGQ"); // Replace with your EmailJS User ID
+            })();
+
+            const connectForm = document.querySelector(".connect-form");
+
+            connectForm.addEventListener("submit", function(event) {
+                event.preventDefault(); // prevent page reload
+
+                emailjs.sendForm("service_x4scqdq", "template_zpmprqd", this)
+                .then(() => {
+                    alert("Message sent successfully to sumitkumarfrontend@gmail.com!");
+                    connectForm.reset();
+                }, (error) => {
+                    alert("Failed to send message: " + JSON.stringify(error));
+                });
+            });
+        </script>
 
 </body>
 

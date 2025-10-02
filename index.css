@@ -324,7 +324,7 @@ section
 .about .about-content .right p
 {
     color: #aaa;
-    text-align: justify;
+    text-align: left;
     padding: 15px 0;
 }
 
@@ -447,7 +447,7 @@ section
 
 .service .service-content .card p 
 {
-    text-align: justify;
+    text-align: left;
 }
 
 .service .service-content .card .box
@@ -534,7 +534,7 @@ section
 
 .skill .skill-content .left p
 {
-    text-align: justify;
+    text-align: left;
     font-size: 18px;
     color: #aaa;
 }
@@ -1039,5 +1039,120 @@ footer span a, footer span+span
     {
         height: 20px;
         border-radius: 13px;
+    }
+}
+
+/* Connect Me Section Formatting */
+.connect {
+    font-family: 'Poppins', sans-serif;
+    background: #222;
+    color: #fff;
+}
+
+.connect .title {
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+    padding-bottom: 25px;
+    text-align: center;
+    margin-bottom: 60px;
+    color: crimson;
+}
+
+.connect .title::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 3px;
+    background: #fff;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.connect .title::after {
+    content: "Let's Get In Touch";
+    position: absolute;
+    background: #222;
+    bottom: -5px;
+    left: 50%;
+    padding: 0 7px;
+    transform: translateX(-50%);
+    font-size: 15px;
+    color: crimson;
+}
+
+.connect .connect-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.connect .collumn {
+    width: calc(50% - 30px);
+}
+
+.connect .collumn.left .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: crimson;
+}
+
+.connect .collumn.left p {
+    font-size: 18px;
+    color: #aaa;
+    text-align: justify;
+}
+
+.connect .collumn.right .connect-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.connect .collumn.right .field {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.connect .collumn.right .field input,
+.connect .collumn.right .field textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.connect .collumn.right .field textarea {
+    resize: none;
+    height: 120px;
+}
+
+.connect .collumn.right .button-area button {
+    background: crimson;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.connect .collumn.right .button-area button:hover {
+    background: none;
+    color: crimson;
+    border: 1.5px solid crimson;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .connect .collumn {
+        width: 100%;
+        margin-bottom: 25px;
     }
 }
